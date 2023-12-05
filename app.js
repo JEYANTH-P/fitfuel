@@ -27,12 +27,12 @@ app.set('view engine','ejs');
 
 //postgresql configuration
 const pool = new Pool({
-    user: 'postgres',
-    host: 'localhost',
-    database: 'fitfuel',
-    password: 'Jeyanth@2004',
-    port: 5432,
-  });
+  user: 'postgres',
+  host: 'localhost',
+  database: 'Fit',
+  password: 'postgres',
+  port: 5432,
+});
 
   const storage = multer.diskStorage({
     destination: function (req, file, cb) {
@@ -391,13 +391,7 @@ app.post("/review", async(req,res)=>{
     res.status(500).json({ error: 'Internal Server Error' });
   } 
 
-
 })
-
-
-
-
-
 
 app.listen(3000,()=>{
     console.log("3000");

@@ -78,3 +78,30 @@ insert into user_profile (user_id,user_name,weight,height,health_issues,diet) va
 select * from "user_profile";
 delete from "user";
 delete from "user_profile";
+
+
+CREATE TABLE food (
+  food_id SERIAL PRIMARY KEY,
+  food_name VARCHAR(255) NOT NULL,
+  food_image VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2) NOT NULL,
+  food_type VARCHAR(50),
+  calories INTEGER,
+  food_tag VARCHAR(50),
+  keyword VARCHAR(50),
+  supplier_id INTEGER);
+select * from food;
+
+select * from manager_food;
+
+CREATE TABLE food (
+  food_id INTEGER PRIMARY KEY,
+  food_name VARCHAR(255) NOT NULL,
+  food_image VARCHAR(255) NOT NULL,
+  description TEXT,
+  price DECIMAL(10, 2) NOT NULL,
+  food_type VARCHAR(50),
+  calories INTEGER,
+  food_tag VARCHAR(50),
+  keyword VARCHAR(50));
